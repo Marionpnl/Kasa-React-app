@@ -1,4 +1,5 @@
 @use "../../style/abstracts/variables.scss";
+@use "../../style/abstracts/mixins.scss";
 
 .layout-container {
     display: flex;
@@ -11,4 +12,8 @@
     width: 100%;
     max-width: variables.$layout-max-width;
     margin: 0 auto;
+
+    @include mixins.mobile-responsive {
+        padding: 0px 22px;
+    }
 }

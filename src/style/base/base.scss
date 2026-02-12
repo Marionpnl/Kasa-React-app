@@ -7,6 +7,10 @@
 // Dans _base.scss
 @use "../../style/abstracts/variables.scss";
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     font-family: variables.$main-font-family;

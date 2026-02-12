@@ -2,27 +2,42 @@
 
 .banner {
     position: relative;
-    margin-top: 35px;
     width: 100%;
-    box-shadow: 0px 4px 4px 0px #00000040;
+    margin-top: 45px;
+    
     img {
         @include mixins.bannerImgAndOverlay;
         object-fit: cover;
+        box-shadow: 0px 4px 4px 0px #00000040;
     }
     .banner__overlay {
         @include mixins.bannerImgAndOverlay;
         position: absolute;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.6); 
     }
     .banner__text {
         position: absolute;
         margin: 0;
-        top: 84px;
-        left: 285px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
         color: white;
         font-size: 48px;
         font-weight: 700;
         text-shadow: 0px 4px 4px 0px #00000040;
     }
+
+        @include mixins.mobile-responsive {
+            img{
+                height: 111px;
+            }
+             .banner__overlay {
+                height: 111px;
+            }
+            .banner__text {
+                font-size: 24px;
+            }
+        }
 }
