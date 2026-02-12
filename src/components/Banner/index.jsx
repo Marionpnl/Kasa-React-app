@@ -1,10 +1,10 @@
 import "./Banner.scss";
 
-function Banner({ image, text }) {
+function Banner({ image, text, opacity }) {
     return(
         <div className="banner">
             <img src={image} alt="Bannière" className="banner__img" />
-            <div className="banner__overlay"></div>
+            <div className="banner__overlay" style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})` }}></div>
             {text && <h1 className="banner__text">{text}</h1>}
         </div>
     )

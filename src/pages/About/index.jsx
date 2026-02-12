@@ -1,8 +1,12 @@
+import Banner from "../../components/Banner";
+import imgAbout from "../../assets/img_about_banner.png";
+
 function About() {
   return (
-    <div>
-      <h1>À propos</h1>
-    </div>
+    <Banner 
+        image={imgAbout}
+        opacity={0.3}
+    />
   )
 }
 
