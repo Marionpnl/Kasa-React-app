@@ -1,0 +1,28 @@
+@use "../../style/abstracts/mixins.scss";
+
+.banner {
+    position: relative;
+    margin-top: 35px;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    img {
+        @include mixins.bannerImgAndOverlay;
+        object-fit: cover;
+    }
+    .banner__overlay {
+        @include mixins.bannerImgAndOverlay;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+    .banner__text {
+        position: absolute;
+        margin: 0;
+        top: 84px;
+        left: 285px;
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        text-shadow: 0px 4px 4px 0px #00000040;
+    }
+}
