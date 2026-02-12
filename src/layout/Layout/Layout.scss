@@ -1,0 +1,14 @@
+@use "../../style/abstracts/variables.scss";
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: variables.$layout-max-width;
+    margin: 0 auto;
+}

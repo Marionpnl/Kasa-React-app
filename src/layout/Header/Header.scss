@@ -1,0 +1,37 @@
+@use "../../style/abstracts/mixins";
+@use "../../style/abstracts/variables";
+
+.header {
+    @include mixins.flexBetween;
+    margin:40px 50px 0 50px;
+
+    img {
+        @include mixins.logoHeaderDesktop;
+    }
+    .navbar {
+        @include mixins.flexBetween;
+        gap:35px;
+        &__link {
+            font-size: 24px;
+            font-weight: 400;
+            &.active {
+                text-decoration: underline;
+        }
+    }
+
+    @include mixins.mobile-responsive {
+        margin: 40px 22px 0 22px;
+
+        img{
+            @include mixins.logoHeaderMobile;
+        }
+        .navbar {
+            gap: 15px;
+            &__link {
+                font-size: 12px;
+                text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

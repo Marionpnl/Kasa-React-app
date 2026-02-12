@@ -1,0 +1,19 @@
+// Le Box-sizing : Pour que les paddings ne cassent pas la largeur de tes boîtes.
+//Le corps du site (body) : La police par défaut, la couleur du texte, la couleur de fond.
+
+//Les réglages par défaut des liens : Enlever le soulignement, définir la couleur.
+
+//Les images : Un max-width: 100% pour éviter qu'elles ne débordent.
+// Dans _base.scss
+@use "../../style/abstracts/variables.scss";
+
+body{
+    margin: 0px;
+    font-family: variables.$main-font-family;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+    cursor: pointer;
+}

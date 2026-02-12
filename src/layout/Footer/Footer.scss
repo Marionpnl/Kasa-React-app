@@ -1,0 +1,31 @@
+@use "../../style/abstracts/mixins";
+@use "../../style/abstracts/variables";
+
+.footer {
+    background-color: black;
+    height: 200px;
+    @include mixins.flexCenter;
+    flex-direction: column;
+    gap:15px;
+
+    img {
+        margin-top: 60px;
+    }
+    p {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    @include mixins.mobile-responsive {
+        gap: 10px;
+        img {
+            margin-top: 25px;
+        }
+        p {
+            font-size: 12px;
+            max-width: 120px;
+            text-align: center;
+        }
+    }
+}

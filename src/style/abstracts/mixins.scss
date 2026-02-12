@@ -1,0 +1,34 @@
+// Ici je mets les média queries, les Flexbox, ...
+@use "../../style/abstracts/variables.scss";
+
+// Pour le centrage Flexbox
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Pour les logos
+@mixin logoHeaderDesktop {
+    width: 210px;
+    height: 68px;
+}
+
+@mixin logoHeaderMobile {
+    width: 145px;
+    height: 47px;
+}
+
+// Média queries
+// Média query pour les écrans mobiles
+@mixin mobile-responsive {
+    @media screen and (max-width: variables.$layout-breakpoint) {
+        @content;
+    }
+}
