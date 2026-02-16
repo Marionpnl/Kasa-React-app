@@ -1,0 +1,21 @@
+@use "../../style/abstracts/mixins.scss";
+
+.home__gallery {
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    padding: 56px 50px;
+    margin: 45px 0px;
+
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 50px;
+
+        @include mixins.mobile-responsive {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0px;
+            margin: 20px 0px;
+        }
+}

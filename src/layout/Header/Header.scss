@@ -16,9 +16,9 @@
             font-weight: 400;
             &.active {
                 text-decoration: underline;
+            }
         }
-    }
-
+    }    
     @include mixins.mobile-responsive {
         margin: 40px 22px 0 22px;
 
@@ -34,4 +34,3 @@
             }
         }
     }
-}

@@ -4,6 +4,8 @@ import imgHome from "../../assets/img_home_banner.png";
 import Card from "../../components/Card";
 import logements from "../../data/logements.json";
 
+import "./Home.scss";
+
 function Home() {
   return (
     <div className="home">
