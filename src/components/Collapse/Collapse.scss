@@ -1,0 +1,55 @@
+@use "../../style/abstracts/variables.scss";
+@use "../../style/abstracts/mixins.scss";
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: variables.$primary-color;
+        border-radius: 5px;
+        padding: 0 15px;
+        height: 52px;
+    }
+    &__title {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+        }
+    &__button {
+        background-color: variables.$primary-color;
+        border: none;
+    }
+    &__arrow {
+        transition-property: transform;
+        transition-duration: 0.4s;
+    }
+        &__arrow.rotate {
+        transform: rotate(180deg);
+        }
+    &__content {
+        display: none;
+    }
+        &__content.show {
+        display: block;
+        background-color: #F6F6F6;
+        border-radius: 5px;
+        padding: 0px 20px;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        }
+    
+    @include mixins.mobile-responsive {
+        width: 100%;
+
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

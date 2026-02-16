@@ -1,0 +1,7 @@
+@use "../../style/abstracts/mixins.scss";
+
+.collapses {
+    @include mixins.flexColumn;
+    gap: 30px;
+    margin: 40px 0;
+}
