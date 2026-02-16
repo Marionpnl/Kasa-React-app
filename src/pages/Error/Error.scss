@@ -1,0 +1,39 @@
+@use '../../style/abstracts/variables';
+@use '../../style/abstracts/mixins';
+
+.error {
+    @include mixins.flexColumn;
+    margin: 110px 0px;
+
+    &__title {
+        font-size: 280px;
+        color: variables.$primary-color;
+        margin: 0px 0px 50px 0px;
+    }
+    &__message {
+        font-size: 36px;
+        color: variables.$primary-color;
+        margin-bottom: 100px;
+    }
+    &__link {
+        font-size: 18px;
+        text-decoration: underline;
+        margin: 20px;
+    }
+
+    @include mixins.mobile-responsive {
+        &__title {
+            font-size: 96px;
+        }
+        &__message {
+            font-size: 18px;
+            text-align: center;
+            span {
+                display: block;
+            }
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+}
