@@ -3,5 +3,5 @@
 .collapses {
     @include mixins.flexColumn;
     gap: 30px;
-    margin: 40px 0;
+    margin-top: 40px;
 }

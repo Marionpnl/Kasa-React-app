@@ -2,6 +2,8 @@ import { useState } from 'react'
 import arrowLeft from '../../assets/arrow-left.png'
 import arrowRight from '../../assets/arrow-right.png'
 
+import './Slideshow.scss'
+
 function Slideshow({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
