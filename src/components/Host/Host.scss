@@ -1,0 +1,21 @@
+@use "../../style/abstracts/variables.scss";
+@use "../../style/abstracts/mixins.scss";
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__name {
+        font-size: 18px;
+        font-weight: 500;
+        color: variables.$primary-color;
+        text-align: right;
+        max-width: 93px;
+    }
+    &__picture {
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
