@@ -1,0 +1,12 @@
+@use "../../style/abstracts/mixins.scss";
+
+.rating {
+    @include mixins.flexEndCenter;
+    gap: 5px;
+    height: 36px;
+    width: 196px;
+
+    &__star {
+        height: 24px;
+    }
+}

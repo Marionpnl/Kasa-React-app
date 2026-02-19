@@ -4,6 +4,7 @@ import Slideshow from "../../components/Slideshow"
 import Collapse from "../../components/Collapse"
 import Tag from "../../components/Tag"
 import Host from "../../components/Host"
+import Rating from "../../components/Rating"
 
 import "./Logement.scss"
 
@@ -33,7 +34,7 @@ function Logement() {
 
         <div className="logement__host-rating">
           <Host host={logement.host} />
-          {/* Composant Rating */}
+          <Rating rating={logement.rating} />
         </div>
       </section>
 
