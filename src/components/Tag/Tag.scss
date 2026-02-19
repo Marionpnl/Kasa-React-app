@@ -1,0 +1,18 @@
+@use "../../style/abstracts/variables.scss";
+@use "../../style/abstracts/mixins.scss";
+
+.tag {
+    display: flex;
+    gap: 10px;
+
+    &__item {
+        min-width: 115px;
+        padding: 4px 25px;
+        background-color: variables.$primary-color;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+}

@@ -24,11 +24,17 @@ function Slideshow({ pictures }) {
 
     return (
       <div className="slideshow">
-          <img src={pictures[currentIndex]} alt={`Photo ${currentIndex + 1}`} className='slideshow__image' />
-          <img src={arrowLeft} alt="Previous Image" className="slideshow__arrow slideshow__arrow--left" onClick={prevSlide} />
-          <img src={arrowRight} alt="Next Image" className="slideshow__arrow slideshow__arrow--right" onClick={nextSlide} />
+        <div className="slideshow__container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          
+          {pictures.map((picture, index) => (
+            <img key={index} src={picture} alt={`Photo ${index + 1}`} className='slideshow__image' />
+          ))}
+        </div>
+        
+        <img src={arrowLeft} alt="Previous Image" className="slideshow__arrow slideshow__arrow--left" onClick={prevSlide} />
+        <img src={arrowRight} alt="Next Image" className="slideshow__arrow slideshow__arrow--right" onClick={nextSlide} />
 
-          <div className="slideshow__counter">{currentIndex + 1} / {pictures.length}</div>
+        <div className="slideshow__counter">{currentIndex + 1} / {pictures.length}</div>
       </div>
     )
   }
