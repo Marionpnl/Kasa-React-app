@@ -13,7 +13,7 @@
             margin: 35px 0px 0px 0px;
         }
         &--location {
-            font-size: 18px;
+            @include mixins.mediumText;
             margin: 5px 0px 10px 0px;
         }
     &__host-rating {
@@ -31,7 +31,7 @@
             display: block;
         }
             &--title {
-                font-size: 18px;
+                @include mixins.mediumText;
                 max-width: 85%;
                 margin-top: 10px;
             }

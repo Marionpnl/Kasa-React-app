@@ -34,7 +34,7 @@
         border-radius: 5px;
         padding: 5px 20px;
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 00;
         letter-spacing: 0.5px;
             ul {
                 list-style-type: none;
@@ -45,6 +45,10 @@
     
     @include mixins.mobile-responsive {
         width: 100%;
+
+        &__content.show {
+            @include mixins.smallText;
+        }
     }
 }
 
@@ -61,8 +65,7 @@
 }
 .collapse-logement {
     .collapse__title {
-        font-size: 18px;
-        font-weight: 700;
+        @include mixins.mediumTextBold;
     }
     @include mixins.mobile-responsive {
         .collapse__header {

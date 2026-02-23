@@ -6,8 +6,7 @@
     gap: 10px;
 
     &__name {
-        font-size: 18px;
-        font-weight: 500;
+        @include mixins.mediumText;
         color: variables.$primary-color;
         text-align: right;
         width: min-content;
