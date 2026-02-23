@@ -20,6 +20,12 @@
     align-items: center;
 }
 
+@mixin flexEndCenter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 // Pour les logos
 @mixin logoHeaderDesktop {
     width: 210px;

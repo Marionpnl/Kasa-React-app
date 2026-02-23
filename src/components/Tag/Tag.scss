@@ -15,4 +15,13 @@
         font-weight: 700;
         border-radius: 10px;
     }
+    @include mixins.mobile-responsive {
+        gap: 8px;
+        &__item {
+            font-size: 10px;
+            min-width: 70px; 
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+    }
 }

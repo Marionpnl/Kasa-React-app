@@ -3,7 +3,7 @@ import arrow from "../../assets/arrow.png";
 
 import "./Collapse.scss";
 
-function Collapse({title, content}) {
+function Collapse({title, content, extraClass}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -11,7 +11,7 @@ function Collapse({title, content}) {
   };
 
   return (
-    <div className="collapse">
+    <div className= {`collapse ${extraClass}`}>
         <div className="collapse__header" >
             <h2 className="collapse__title">{title}</h2>
             <button className="collapse__button" onClick={toggleCollapse}>

@@ -18,14 +18,14 @@ function Logement() {
   }
 
   return (
-    <div className="logement-sheet">
+    <div className="logement">
       <Slideshow pictures={logement.pictures} />
 
       <section className="logement__header">
 
         <div className="logement__infos">
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
+          <h2 className="logement--title">{logement.title}</h2>
+          <p className="logement--location">{logement.location}</p>
           
           <div className="logement__tags">
             <Tag tags={logement.tags} />
@@ -39,8 +39,8 @@ function Logement() {
       </section>
 
       <section className="logement__details">
-        <Collapse title="Description" content={logement.description} />
-        <Collapse title="Équipements" content={logement.equipments} />
+        <Collapse extraClass="collapse-logement" title="Description" content={logement.description} />
+        <Collapse extraClass="collapse-logement" title="Équipements" content={logement.equipments} />
       </section>
     </div>
   )

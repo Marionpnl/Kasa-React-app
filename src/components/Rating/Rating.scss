@@ -9,4 +9,12 @@
     &__star {
         height: 24px;
     }
+
+    @include mixins.mobile-responsive {
+      justify-content: flex-start;
+      gap: 0px;
+      &__star {
+      height: 18px;
+        }
+    }
 }

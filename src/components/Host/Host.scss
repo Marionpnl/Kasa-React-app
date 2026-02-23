@@ -2,8 +2,7 @@
 @use "../../style/abstracts/mixins.scss";
 
 .host {
-    display: flex;
-    align-items: center;
+    @include mixins.flexEndCenter;
     gap: 10px;
 
     &__name {
@@ -11,11 +10,19 @@
         font-weight: 500;
         color: variables.$primary-color;
         text-align: right;
-        max-width: 93px;
+        width: min-content;
     }
     &__picture {
         height: 64px;
         border-radius: 50%;
         object-fit: cover;
+    }
+    @include mixins.mobile-responsive {
+        &__name {
+            font-size: 12px;
+        }
+        &__picture {
+            height: 32px;
+        }
     }
 }

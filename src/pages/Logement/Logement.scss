@@ -1,0 +1,55 @@
+@use "../../style/abstracts/mixins.scss";
+@use "../../style/abstracts/variables.scss";
+
+.logement {
+    &__header {
+        @include mixins.flexBetween;
+        flex-wrap: wrap;
+    }
+        &--title {
+            font-size: 36px;
+            font-weight: 500;
+            color: variables.$primary-color;
+            margin: 35px 0px 0px 0px;
+        }
+        &--location {
+            font-size: 18px;
+            margin: 5px 0px 10px 0px;
+        }
+    &__host-rating {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__details {
+        display: flex;
+        gap: 75px;
+        margin-top: 15px;
+    }
+    @include mixins.mobile-responsive {
+        &__header {
+            display: block;
+        }
+            &--title {
+                font-size: 18px;
+                max-width: 85%;
+                margin-top: 10px;
+            }
+            &--location {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        &__host-rating {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        &__details {
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+    }
+}
