@@ -19,15 +19,17 @@ function Collapse({title, content, extraClass}) {
             </button>
         </div>
         <div className={`collapse__content ${isOpen ? 'show' : ''}`}>
-            {Array.isArray(content) ? (
-                <ul>
-                    {content.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
-            ) : (
-                <p>{content}</p>
-            )}
+            <div className="collapse__content--inner">
+                {Array.isArray(content) ? (
+                    <ul>
+                        {content.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>{content}</p>
+                )}
+            </div>
         </div>
     </div>
   );
